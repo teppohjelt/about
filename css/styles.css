@@ -1,0 +1,72 @@
+body {
+  font-family: Kodchasan, Verdana, Geneva, sans-serif;
+  margin: 0 18%;
+  font-size: 1rem;
+  text-align: left;
+}
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 7rem;
+}
+
+
+h2 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 5rem;
+}
+
+hr {
+  color: #b22222;
+  border: dotted 1rem;
+  width: 10%;
+  border-bottom: none;
+  margin: 10% auto 0;
+}
+
+.to-top {
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.5rem;
+  color: #b22222;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.to-top a {
+    color: #b22222;
+    text-decoration: none;
+}
+
+.text-box {
+  padding: 5% 3% 0;
+}
+
+/* sections */
+.navbar {
+  font-size: 1rem;
+  padding: 2% 0;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Amatic SC', cursive;
+}
+
+.intro, .contact {
+  text-align: center;
+}
+
+.skills ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* images */
+.intro-img {
+  width: 80%;
+  height: 80%;
+  margin: 2% 0;
+  text-align: center;
+  border-radius: 2%;
+}
