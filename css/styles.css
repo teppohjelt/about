@@ -10,7 +10,6 @@ h1 {
   font-size: 7rem;
 }
 
-
 h2 {
   font-family: 'Amatic SC', cursive;
   font-size: 5rem;
@@ -33,8 +32,8 @@ hr {
 }
 
 .to-top a {
-    color: #b22222;
-    text-decoration: none;
+  color: #b22222;
+  text-decoration: none;
 }
 
 .text-box {
@@ -75,10 +74,10 @@ hr {
   h1 {
     font-size: 5rem;
   }
+
   body {
-    text-align:center;
+    text-align: center;
+    margin: 0 10%;
   }
-  hr {
-    border: dotted 0.8rem;
-  }
+
 }
