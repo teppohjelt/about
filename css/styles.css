@@ -79,6 +79,6 @@ hr {
     text-align:center;
   }
   hr {
-    width: 40%;
+    border: dotted 0.8rem;
   }
 }
