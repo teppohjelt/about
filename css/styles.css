@@ -56,6 +56,16 @@ hr {
   text-align: center;
 }
 
+.contact img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.contact-detail {
+  margin: 3% 3% 5%;
+  display: inline-block;
+}
+
 .skills ul {
   list-style-type: none;
   padding-left: 0;
@@ -81,6 +91,7 @@ hr {
   body {
     margin: 0 12px;
   }
+
   h1 {
     font-size: 5rem;
   }
