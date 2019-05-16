@@ -23,16 +23,18 @@ hr {
   margin: 10% auto 0;
 }
 
+a {
+  color: #b22222;
+}
+
 .to-top {
   font-family: 'Amatic SC', cursive;
   font-size: 1.5rem;
-  color: #b22222;
   text-align: center;
   margin-bottom: 5%;
 }
 
 .to-top a {
-  color: #b22222;
   text-decoration: none;
 }
 
@@ -52,32 +54,31 @@ hr {
   font-family: 'Amatic SC', cursive;
 }
 
-.intro, .contact {
-  text-align: center;
-}
-
-.contact img {
-  height: 2rem;
-  width: 2rem;
-}
-
-.contact-detail {
-  margin: 3% 3% 5%;
-  display: inline-block;
-}
-
-.skills ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-/* images */
 .intro-img {
   width: 80%;
   height: 80%;
   margin: 2% 0;
   text-align: center;
   border-radius: 2%;
+}
+
+.intro, .contact {
+  text-align: center;
+}
+
+.contact img {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.contact-detail {
+  margin: 3% 3% 10%;
+  display: inline-block;
+}
+
+.skills ul, .outputs ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 @media only screen and (max-width:991px) {
