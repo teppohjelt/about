@@ -1,0 +1,40 @@
+body {
+  text-align: center;
+
+}
+
+.button-circle {
+  background-color: pink;
+  border: none;
+  padding: 1%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  height: 3rem;
+  width: 3rem;
+  margin: 1%;
+  border-radius: 50%;
+}
+
+assignment input {
+  border: 0;
+}
+
+.integer {
+  width: 3rem;
+}
+
+#int-1 {
+  width: 5rem;
+}
+.text-equals {
+  width: 1rem;
+}
+.text-result {
+  width: 2rem;
+}
+.text-time {
+  width: 3rem;
+  text-align: right;
+}
