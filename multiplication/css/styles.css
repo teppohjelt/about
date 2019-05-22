@@ -3,6 +3,12 @@ body {
 
 }
 
+.invisible {
+  display:none;
+}
+
+/* navbar */
+
 .button-circle {
   background-color: pink;
   border: none;
@@ -17,12 +23,12 @@ body {
   border-radius: 50%;
 }
 
-assignment input {
-  border: 0;
-}
-
 .integer {
   width: 3rem;
+}
+
+#help-section {
+  text-align: left;
 }
 
 #int-1 {

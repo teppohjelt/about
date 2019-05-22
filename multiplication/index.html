@@ -15,45 +15,80 @@
 <body>
   <section id="navbar">
     <div class="navlinks">
-      <a href="#assignment">pelaa</a>
-      <a href="#help">ohje</a>
-      <a href="#top20">top 20</a>
+      <button type="button" name="button-play" id="button-play">Uusi peli</button>
+      <button type="button" name="button-help" id="button-help">Katso ohje</button>
+      <!-- <a href="#assignment" id="play">Aloita peli</a>
+      <a href="#help" id="">Katso ohje</a> -->
     </div>
   </section>
 
-  <section id="help">
-    <p>ks. vanhasta</p>
-  </section>
-
-  <section id="assignment">
-    <div class="assignment">
-      <p class="multiplication-time">
-        Aikaa jäljellä <span id="time">10</span> s.</p>
-        <p class="multiplication"><span id="int-1">0</span> x <span id="int-2">0</span> = <input id="result" size="2" />
-      </p>
-    </div>
-
-    <div class="keyboard">
-      <button type="button" class="button-circle" name="1">1</button>
-      <button type="button" class="button-circle" name="2">2</button>
-      <button type="button" class="button-circle" name="3">3</button><br>
-      <button type="button" class="button-circle" name="4">4</button>
-      <button type="button" class="button-circle" name="5">5</button>
-      <button type="button" class="button-circle" name="6">6</button><br>
-      <button type="button" class="button-circle" name="7">7</button>
-      <button type="button" class="button-circle" name="8">8</button>
-      <button type="button" class="button-circle" name="9">9</button><br>
-      <button type="button" class="button-circle" name="empty">*</button>
-      <button type="button" class="button-circle" name="0">0</button>
-      <button type="button" class="button-circle"="enter">v</button>
+  <section id="help-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          Saat ratkaistavaksesi 10 kertolaskutehtävää kertotauluista 1 - 10. Pisteitä saat oikeasta
+          vastauksesta ja siitä, kuinka nopeasti onnistut tehtävän ratkaisemaan.
+          Sinulla on 10 sekuntia aikaa ratkaista jokainen tehtävä.
+        </div>
+        <div class="col-lg-4">
+          Peliohjeet:
+          <ol>
+            <li>Napauta ylävalikosta <strong>Uusi peli</strong></li>
+            <li>Vastaa numeronapeilla</li>
+            <li>Napauta aina vastaamisen jälkeen <strong>v</strong>-nappia</li>
+            <li>Jatka, kunnes tehtävät loppuvat</li>
+          </ol>
+        </div>
+        <div class="col-lg-4">
+          Jos et onnistu ratkaisemaan jotain tehtävää 10 sekunnissa, seuraava tehtävä tulee
+          automaattisesti näkyviin ja voit alkaa ratkaista sitä.
+          Pelin loputtua näet vielä väärin menneiden tehtävien oikeat ratkaisut. Onnea peliin!
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="results">
+  <section id="assignment-section">
+    
+      <div class="assignment">
+        <p>
+          Tehtävä <span id="tehtava">0</span>.
+          Aikaa jäljellä <span id="time">10</span> s.
+        </p>
+        <p class="multiplication">
+          <span id="multiplier">0</span> x <span id="multiplicant">0</span>
+           = <input type="text" value="" id="product" size="3" />
+        </p>
+      </div>
+
+      <div class="keyboard">
+         <!-- http://jsfiddle.net/98Amc/ -->
+        <input type="button" class="button-circle" name="1" value="1" id="1" onClick=addNumber(this); />
+        <input type="button" class="button-circle" name="2" value="2" id="2" onClick=addNumber(this); />
+        <input type="button" class="button-circle" name="3" value="3" id="3" onClick=addNumber(this); /><br>
+        <input type="button" class="button-circle" name="4" value="4" id="4" onClick=addNumber(this); />
+        <input type="button" class="button-circle" name="5" value="5" id="5" onClick=addNumber(this); />
+        <input type="button" class="button-circle" name="6" value="6" id="6" onClick=addNumber(this); /><br>
+        <input type="button" class="button-circle" name="7" value="7" id="7" onClick=addNumber(this); />
+        <input type="button" class="button-circle" name="8" value="8" id="8" onClick=addNumber(this); />
+        <input type="button" class="button-circle" name="9" value="9" id="9" onClick=addNumber(this); /><br>
+        <input type="button" class="button-circle" name="0" value="0" id="0" onClick=addNumber(this); />
+        <input type="button" class="button-circle" name="enter" value="enter" id="enter" />
+      </div>
 
   </section>
 
-  <section id="top20">
+  <section id="result-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          Sait x % huippupisteistä.
+        </div>
+        <div class="col-lg-6">
+          Seuraavat tehtävät menivät väärin:
+        </div>
+      </div>
+    </div>
 
   </section>
 
@@ -62,7 +97,8 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+  <!-- custom javascript -->
+  <script src="js/code.js"></script>
 </body>
 
 </html>
