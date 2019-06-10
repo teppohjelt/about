@@ -140,7 +140,7 @@ function countScore() {
     timeFactor = time * 0.5;
     score = multiplierFactor * multiplicantFactor * timeFactor * 10;
     score = Math.round(score); // pyöristetään
-    console.log("score: " + score + "; scoreTotal: " + scoreTotal);
+    //console.log("score: " + score + "; scoreTotal: " + scoreTotal);
   } else {
     score = 0; // lasku meni väärin
     addToSummary();
@@ -157,7 +157,6 @@ function countScore() {
 function addToSummary() {
   var summaryText = multiplier + ' x ' + multiplicant + ' = ' + multiplier * multiplicant + ', vastasit ' + result;
   $("#summary").append("<p>" + summaryText + "</p>");
-  console.log($("#summary").text());
 }
 
 function resetAll() {
@@ -175,6 +174,7 @@ function resetAll() {
   $("#multiplicant").text(multiplicant);
   $("#time").text(time);
   $("#result").val("");
+  $("#summary").text("");
 }
 
 function end() {
