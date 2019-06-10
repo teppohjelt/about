@@ -49,31 +49,33 @@
   </section>
 
   <section id="assignment-section">
-    
+
       <div class="assignment">
         <p>
-          Tehtävä <span id="tehtava">0</span>.
+          Tehtävä <span id="assignment">0</span>.
           Aikaa jäljellä <span id="time">10</span> s.
+          <button type="button" name="start" id="start">Aloita!</button>
         </p>
         <p class="multiplication">
           <span id="multiplier">0</span> x <span id="multiplicant">0</span>
-           = <input type="text" value="" id="product" size="3" />
+           = <input type="text" value="" id="result" size="3" />
         </p>
       </div>
 
       <div class="keyboard">
          <!-- http://jsfiddle.net/98Amc/ -->
-        <input type="button" class="button-circle" name="1" value="1" id="1" onClick=addNumber(this); />
-        <input type="button" class="button-circle" name="2" value="2" id="2" onClick=addNumber(this); />
-        <input type="button" class="button-circle" name="3" value="3" id="3" onClick=addNumber(this); /><br>
-        <input type="button" class="button-circle" name="4" value="4" id="4" onClick=addNumber(this); />
-        <input type="button" class="button-circle" name="5" value="5" id="5" onClick=addNumber(this); />
-        <input type="button" class="button-circle" name="6" value="6" id="6" onClick=addNumber(this); /><br>
-        <input type="button" class="button-circle" name="7" value="7" id="7" onClick=addNumber(this); />
-        <input type="button" class="button-circle" name="8" value="8" id="8" onClick=addNumber(this); />
-        <input type="button" class="button-circle" name="9" value="9" id="9" onClick=addNumber(this); /><br>
-        <input type="button" class="button-circle" name="0" value="0" id="0" onClick=addNumber(this); />
-        <input type="button" class="button-circle" name="enter" value="enter" id="enter" />
+        <input type="button" class="button-circle number-button" name="1" value="1" id="1" />
+        <input type="button" class="button-circle number-button" name="2" value="2" id="2" />
+        <input type="button" class="button-circle number-button" name="3" value="3" id="3" /><br>
+        <input type="button" class="button-circle number-button" name="4" value="4" id="4" />
+        <input type="button" class="button-circle number-button" name="5" value="5" id="5" />
+        <input type="button" class="button-circle number-button" name="6" value="6" id="6" /><br>
+        <input type="button" class="button-circle number-button" name="7" value="7" id="7" />
+        <input type="button" class="button-circle number-button" name="8" value="8" id="8" />
+        <input type="button" class="button-circle number-button" name="9" value="9" id="9" /><br>
+        <input type="button" class="button-circle number-button" name="0" value="0" id="0" />
+        <input type="button" class="button-circle" name="ok" value="ok" id="ok" />
+        <input type="button" class="button-circle" name="del" value="del" id="del" />
       </div>
 
   </section>
@@ -82,10 +84,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          Sait x % huippupisteistä.
+          <p>Sait seuraavat yhteispisteet:</p>
+          <p id="score-total"></p>
         </div>
-        <div class="col-lg-6">
-          Seuraavat tehtävät menivät väärin:
+        <div id="summary" class="col-lg-6">
+          <p>Seuraavat tehtävät menivät väärin:</p>
         </div>
       </div>
     </div>
