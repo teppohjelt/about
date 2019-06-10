@@ -31,16 +31,16 @@ body {
 .button-circle {
   background-color: #ff5959;
   border: none;
-  font-size: 1rem;
+  font-size: 1.9rem;
   font-family: 'Sigmar One', cursive;
-  height: 3rem;
-  width: 3rem;
-  margin: 0.7rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  margin: 0.5rem;
   border-radius: 50%;
 }
 
-.number-button {
-  font-size: 2rem;
+#del {
+  font-size: 1.5rem;
 }
 
 .multiplication {
