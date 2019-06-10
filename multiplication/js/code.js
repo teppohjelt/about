@@ -13,6 +13,12 @@ var timer = setInterval(function() {
 }, 1000); // time reduction by 1 sec
 
 // initializations
+$(document).ready(function() {
+  if (Modernizr.touch) {
+    // Disable keyboard by adding readonly attribute to field
+    $('[data-disable-touch-keyboard]').attr('readonly', 'readonly');
+  }
+});
 $("#assignment-section").addClass("invisible");
 $("#result-section").addClass("invisible");
 clearInterval(timer);
