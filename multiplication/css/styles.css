@@ -53,5 +53,9 @@ body {
 }
 
 #help-section {
-  text-align: left;
+  text-align:left;
+}
+
+.help-div {
+  margin: 1rem;
 }
