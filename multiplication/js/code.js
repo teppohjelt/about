@@ -19,7 +19,7 @@ $(document).ready(function() {
     $('[data-disable-touch-keyboard]').attr('readonly', 'readonly');
   }
 });
-$("#assignment-section").addClass("invisible");
+$("#help-section").addClass("invisible");
 $("#result-section").addClass("invisible");
 clearInterval(timer);
 

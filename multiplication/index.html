@@ -9,14 +9,15 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Sigmar+One&display=swap" rel="stylesheet">
   <title>Kertolaskupeli</title>
 </head>
 
 <body>
   <section id="navbar">
     <div class="navlinks">
-      <button type="button" name="button-play" id="button-play">Uusi peli</button>
-      <button type="button" name="button-help" id="button-help">Katso ohje</button>
+      <button type="button" class="btn btn-warning" name="button-play" id="button-play">Uusi peli</button>
+      <button type="button" class="btn btn-warning" name="button-help" id="button-help">Katso ohje</button>
       <!-- <a href="#assignment" id="play">Aloita peli</a>
       <a href="#help" id="">Katso ohje</a> -->
     </div>
@@ -54,10 +55,10 @@
       <p>
         Tehtävä <span id="assignment">0</span>.
         Aikaa jäljellä <span id="time">10</span> s.
-        <button type="button" name="start" id="start">Aloita!</button>
+        <button type="button" class="btn btn-info" name="start" id="start">Aloita!</button>
       </p>
       <p class="multiplication">
-        <span id="multiplier">0</span> x <span id="multiplicant">0</span>
+        <span id="multiplier">0</span> <span id="x-sign">×</span> <span id="multiplicant">0</span>
         = <input type="text" value="" id="result" size="3" data-disable-touch-keyboard />
       </p>
     </div>
