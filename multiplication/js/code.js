@@ -202,6 +202,9 @@ function end() {
       levelText = "Getting there, practice more :)";
   }
   $("#level").text(levelText);
+  if ($("#summary").text() == "") {
+    $("#summary").text("Kaikki oikein, ei huteja!");
+  }
 }
 
 function backSpace() { // bt used
