@@ -189,13 +189,13 @@ function end() {
   $("#score-total").text(scoreTotal);
   var levelText = "";
   switch (true) {
-    case (scoreTotal > 700):
+    case (scoreTotal >= 700):
       levelText = "You're the boss!";
       break;
-    case (scoreTotal > 600):
+    case (scoreTotal >= 600):
       levelText = "Excellent!";
       break;
-    case (scoreTotal > 500):
+    case (scoreTotal >= 500):
       levelText = "Good!";
       break;
     default:
