@@ -24,6 +24,10 @@ $("#result-section").addClass("invisible");
 clearInterval(timer);
 
 // EVENTLISTENERS start ------------------------------------
+$("#back-home").click(function() {
+  window.location="../index.html";
+});
+
 $("#button-play").click(function() {
   resetAll();
   $("#help-section").addClass("invisible");
