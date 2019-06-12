@@ -188,14 +188,14 @@ function end() {
   $("#help-section").addClass("invisible");
   $("#score-total").text(scoreTotal);
   var levelText = "";
-  switch (scoreTotal) {
-    case scoreTotal > 700:
+  switch (true) {
+    case (scoreTotal > 700):
       levelText = "You're the boss!";
       break;
-    case scoreTotal > 600:
+    case (scoreTotal > 600):
       levelText = "Excellent!";
       break;
-    case scoreTotal > 500:
+    case (scoreTotal > 500):
       levelText = "Good!";
       break;
     default:

@@ -66,22 +66,20 @@ h3 {
   font-size: 3rem;
 }
 
-table {
-  text-align: left;
-}
-
 td {
   padding: 0 2rem 1rem 0;
+  text-align: left;
 }
 
 #level {
   font-size: 2rem;
   font-family: 'Sigmar One', cursive;
+  color: #a773c3;
 }
 
-/* #result-section {
-  text-align: left;
-} */
+ul {
+  padding-left: 0;
+}
 
 #help-section {
   text-align:left;
