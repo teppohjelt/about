@@ -41,9 +41,7 @@ $("#start").click(showNewAssignment);
 
 $("#ok").click(countScore);
 
-$("#del").click(function() {
-  $("#result").val("");
-});
+$("#del").click(backSpace);
 
 $(".number-button").click(function() {
   $("#result").val($("#result").val() + this.value);
@@ -189,14 +187,27 @@ function end() {
   $("#assignment-section").addClass("invisible");
   $("#help-section").addClass("invisible");
   $("#score-total").text(scoreTotal);
+  var levelText = "";
+  switch (scoreTotal) {
+    case scoreTotal > 700:
+      levelText = "You're the boss!";
+      break;
+    case scoreTotal > 600:
+      levelText = "Excellent!";
+      break;
+    case scoreTotal > 500:
+      levelText = "Good!";
+      break;
+    default:
+      levelText = "Getting there, practice more :)";
+  }
+  $("#level").text(levelText);
 }
-// FUNCTIONS not in use
+
 function backSpace() { // bt used
-  var result = document.querySelector("#result").value;
-  if (result.length > 1) {
-    var resultWithoutLastDigit = Math.floor(result / 10);
-    document.querySelector("#result").value = resultWithoutLastDigit;
+  if ($("#result").val().length > 1) {
+    $("#result").val(Math.floor($("#result").val() / 10));
   } else {
-    document.querySelector("#result").value = "";
+    $("#result").val("");
   }
 }

@@ -1,10 +1,14 @@
 body {
   text-align: center;
-  color: #085f63;
+  color: #854777;
   margin: 1%;
   font-size: 1rem;
   border-radius: 10%;
   font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+h3 {
+  font-family: 'Sigmar One', cursive;
 }
 
 .invisible {
@@ -13,14 +17,20 @@ body {
 
 .btn {
   margin: 1rem;
+  border: none;
 }
 
-.btn-warging {
-  background-color: #facf5a;
+.btn-navi {
+  background-color: #ffc6be;
 }
 
-.btn-info {
-  background-color: #49beb7;
+.btn-start {
+  background-color: #a773c3;
+  margin: 1rem;
+}
+
+.assignment {
+  /* color: black; */
 }
 
 #result {
@@ -29,7 +39,7 @@ body {
 }
 
 .button-circle {
-  background-color: #ff5959;
+  background-color: #ffa1c5;
   border: none;
   font-size: 1.9rem;
   font-family: 'Sigmar One', cursive;
@@ -49,13 +59,34 @@ body {
 }
 
 #x-sign {
-  font-size: 1rem;
+  font-size: 2rem;
 }
+
+#score-total {
+  font-size: 3rem;
+}
+
+table {
+  text-align: left;
+}
+
+td {
+  padding: 0 2rem 1rem 0;
+}
+
+#level {
+  font-size: 2rem;
+  font-family: 'Sigmar One', cursive;
+}
+
+/* #result-section {
+  text-align: left;
+} */
 
 #help-section {
   text-align:left;
 }
 
 .help-div {
-  margin: 1rem;
+  padding: 2rem;
 }

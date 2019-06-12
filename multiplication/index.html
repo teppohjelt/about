@@ -16,8 +16,8 @@
 <body>
   <section id="navbar">
     <div class="navlinks">
-      <button type="button" class="btn btn-warning" name="button-play" id="button-play">Uusi peli</button>
-      <button type="button" class="btn btn-warning" name="button-help" id="button-help">Katso ohje</button>
+      <button type="button" class="btn btn-warning btn-navi" name="button-play" id="button-play">Uusi peli</button>
+      <button type="button" class="btn btn-warning btn-navi" name="button-help" id="button-help">Katso ohje</button>
       <!-- <a href="#assignment" id="play">Aloita peli</a>
       <a href="#help" id="">Katso ohje</a> -->
     </div>
@@ -26,24 +26,27 @@
   <section id="help-section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 help-div">
+        <div class="help-div col-lg-4">
+          <h3>Kertolaskupeli</h3>
           Saat ratkaistavaksesi <strong>10 kertolaskutehtävää</strong> kertotauluista 1 - 10. Pisteitä saat oikeasta
           vastauksesta ja siitä, kuinka nopeasti onnistut tehtävän ratkaisemaan.
-          Sinulla on 10 sekuntia aikaa ratkaista jokainen tehtävä.
+          Sinulla on <strong>10 sekuntia aikaa</strong> ratkaista jokainen tehtävä.
         </div>
-        <div class="col-lg-4 help-div">
-          <strong>Peliohjeet:</strong>
-          <ol>
-            <li>Napauta ylävalikosta <strong>Uusi peli</strong> -painiketta.</li>
-            <li>Voit vastata näppäimistöllä tai ruudun numeropainikkeilla.</li>
-            <li>Napauta aina vastaamisen jälkeen <strong>ok</strong>-painiketta tai <strong>Enteriä</strong>.</li>
+        <div class="help-div col-lg-4">
+          <ul>
+            <h3>Pelaa näin:</h3>
+            <li>Ajanotto alkaa, kun napautat <strong>Aloita</strong>-painiketta.</li>
+            <li>Voit vastata ruudun numeropainikkeilla (mobiili) tai näppäimistöllä (tietokone).</li>
+            <li>Napauta aina vastaamisen jälkeen <strong>OK</strong>-painiketta tai <strong>Enteriä</strong>,
+              jolloin saat uuden tehtävän ratkaistavaksi.</li>
             <li>Jatka, kunnes tehtävät loppuvat.</li>
-          </ol>
+          </ul>
         </div>
-        <div class="col-lg-4 help-div">
+        <div class="help-div col-lg-4">
+          <h3>Onnea peliin!</h3>
           Jos et onnistu ratkaisemaan jotain tehtävää 10 sekunnissa, seuraava tehtävä tulee
           automaattisesti näkyviin ja voit alkaa ratkaista sitä.
-          Pelin loputtua näet vielä väärin menneiden tehtävien oikeat ratkaisut. <strong>Onnea peliin!</strong>
+          Pelin loputtua näet vielä pisteesi ja väärin menneiden tehtävien oikeat ratkaisut.
         </div>
       </div>
     </div>
@@ -55,7 +58,7 @@
       <p>
         Tehtävä <span id="assignment">0</span>.
         Aikaa jäljellä <span id="time">10</span> s.
-        <button type="button" class="btn btn-info" name="start" id="start">Aloita!</button>
+        <button type="button" class="btn btn-info btn-start" name="start" id="start">Aloita!</button>
       </p>
       <p class="multiplication">
         <span id="multiplier">0</span> <span id="x-sign">×</span> <span id="multiplicant">0</span>
@@ -84,13 +87,41 @@
   <section id="result-section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6">
-          <p>Sait seuraavat yhteispisteet:</p>
+        <div class="col-lg-4">
+          <h3>Yhteispisteesi</h3>
           <p id="score-total"></p>
+          <p id="level"></p>
         </div>
-        <div class="col-lg-6">
-          <p>Seuraavat tehtävät menivät väärin:</p>
+        <div class="col-lg-4">
+          <h3>Näissä tuli huteja</h3>
           <div id="summary"></div>
+        </div>
+        <div class="col-lg-4">
+          <table id="level-table">
+            <tr>
+              <th colspan="2">
+                <h3>Pistetasot</h3>
+              </th>
+            </tr>
+            <tr>
+              <td>700 tai yli</td>
+              <td>Päällikkö</td>
+            </tr>
+            <tr>
+              <td>600 - 699</td>
+              <td>Erinomainen</td>
+            </tr>
+            <tr>
+              <td>500 - 599</td>
+              <td>Hyvä</td>
+            </tr>
+            <tr>
+              <td>
+                alle 500</td>
+              <td>Lisää harjoitusta
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
