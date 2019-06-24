@@ -21,24 +21,35 @@ $(document).ready(function() {
 });
 $("#help-section").addClass("invisible");
 $("#result-section").addClass("invisible");
+$("#multiplication-table-section").addClass("invisible");
 clearInterval(timer);
 
 // EVENTLISTENERS start ------------------------------------
 $("#back-home").click(function() {
-  window.location="../index.html";
+  window.location = "../index.html";
 });
 
 $("#button-play").click(function() {
   resetAll();
   $("#help-section").addClass("invisible");
   $("#result-section").addClass("invisible");
+  $("#multiplication-table-section").addClass("invisible");
   $("#assignment-section").removeClass("invisible"); // set visible
 });
 
 $("#button-help").click(function() {
   $("#assignment-section").addClass("invisible");
   $("#result-section").addClass("invisible");
+  $("#multiplication-table-section").addClass("invisible");
   $("#help-section").removeClass("invisible"); // set visible
+});
+
+$("#button-multiplication-table").click(function() {
+  $("#assignment-section").addClass("invisible");
+  $("#result-section").addClass("invisible");
+  $("#help-section").addClass("invisible");
+  $("#multiplication-table-section").removeClass("invisible"); // set visible
+  showMultiplicationTable();
 });
 
 $("#start").click(showNewAssignment);
@@ -75,8 +86,8 @@ function showNewAssignment() {
     $("#result").val("");
     $("#result").focus();
     assignment++;
-    multiplier = Math.floor((Math.random() * 10) + 1); // arvotaan luku väliltä 1 - 10
-    multiplicant = Math.floor((Math.random() * 10) + 1); // arvotaan luku väliltä 1 - 10
+    multiplier = Math.floor((Math.random() * 9) + 2); // arvotaan luku väliltä 1 - 10
+    multiplicant = Math.floor((Math.random() * 9) + 2); // arvotaan luku väliltä 1 - 10
     $("#assignment").text(assignment);
     $("#multiplier").text(multiplier);
     $("#multiplicant").text(multiplicant);
@@ -99,7 +110,6 @@ function countScore() {
   if (result == multiplier * multiplicant) { // lasku meni oikein
     switch (multiplier) { // kertoimet lukujen vaikeuden mukaan (tätä voisi lyhentää)
       case 10:
-      case 1:
         multiplierFactor = 1.1;
         break;
       case 5:
@@ -123,7 +133,6 @@ function countScore() {
     }
     switch (multiplicant) {
       case 10:
-      case 1:
         multiplicantFactor = 1.1;
         break;
       case 5:
@@ -217,4 +226,25 @@ function backSpace() { // bt used
   } else {
     $("#result").val("");
   }
+}
+
+function showMultiplicationTable() {
+  if ($("#multiplication-table").text().length == 0) {
+    var tableHtml = "";
+    tableHtml += "<table class='table table-striped'>";
+    for (var i = 1; i <= 10; i++) {
+      tableHtml += "<tr>";
+      for (var j = 1; j <= 10; j++) {
+        if (i==1 || j==1) {
+          tableHtml += "<td class='heading' class='narrow'>" + i * j + "</td>";
+        } else {
+          tableHtml += "<td class='narrow'>" + i * j + "</td>";
+        }
+      }
+      tableHtml += "</tr>";
+    }
+    tableHtml += "</table>";
+    $("#multiplication-table").append(tableHtml);
+  }
+
 }
